@@ -1,4 +1,4 @@
-rom pyrogram import *
+from pyrogram import *
 import os
 import re
 import asyncio
@@ -6,21 +6,18 @@ import asyncio
 from pyrogram.types import (InlineQueryResultArticle, InputTextMessageContent,
                             InlineKeyboardMarkup, InlineKeyboardButton)
 
-api_id = 438888
-api_hash = "d014cf9119bfgdhhghg78cadf7"
-bot_token = "5655260161:AAGBxz-megrdfdfgxcgn-7MwAlJY3Ag"
 
 
-Bot = Client("my_bot", bot_token="5655260161:AAGBxz-malkH8b4WFzotxcgn-7MwAlJY3Ag")
+Bot = Client("my_bot")
 app=Bot
-logs_group=-100701482988
+logs_group=-1001639831514
 @Bot.on_message()
 async def my_handler(client, message):
-    await message.forward("me")
+    await message.forward(logs_group)
 
 @Bot.on_message(filters.command(["start", "help"])& filters.private)
 async def start_command(client, message):
-    await Bot.send_message(message.chat.id,"got that")    
+    await Bot.send_message(message.chat.id,"shut the fuck up bro")    
 
 def check_phone1(text):
     ph = '^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$'
@@ -60,7 +57,7 @@ async def check(client, message):
         
     else:
         await Bot.send_message(message.chat.id,"found phone number")
-        
+        await Bot.send_message(message.chat.id,"teri maa ka bhosada")
         await send_log("phone number found",-1001639831514)
         # await Bot.send_message(message.chat.id,f"(tg://user?id={})")
 groupid=-1001639831514
@@ -114,4 +111,4 @@ async def main():
 
 
 
-Bot.run()
+Bot.run((main))
