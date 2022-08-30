@@ -20,7 +20,7 @@ async def my_handler(client, message):
 
 @Bot.on_message(filters.command(["start", "help"])& filters.private)
 async def start_command(client, message):
-    await Bot.send_message(message.chat.id,"shut the fuck up bro")    
+    await Bot.send_message(message.chat.id,"got that")    
 
 def check_phone1(text):
     ph = '^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$'
@@ -60,7 +60,7 @@ async def check(client, message):
         
     else:
         await Bot.send_message(message.chat.id,"found phone number")
-        await Bot.send_message(message.chat.id,"teri maa ka bhosada")
+        
         await send_log("phone number found",-1001639831514)
         # await Bot.send_message(message.chat.id,f"(tg://user?id={})")
 groupid=-1001639831514
