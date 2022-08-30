@@ -6,9 +6,9 @@ import asyncio
 from pyrogram.types import (InlineQueryResultArticle, InputTextMessageContent,
                             InlineKeyboardMarkup, InlineKeyboardButton)
 
-api_id = 4339801
-api_hash = "d014cf9119b42292b8d07ca6a78cadf7"
-bot_token = "5655260161:AAGBxz-malkH8b4WFzotxcgn-7MwAlJY3Ag"
+api_id = 438888
+api_hash = "d014cf9119bfgdhhghg78cadf7"
+bot_token = "5655260161:AAGBxz-megrdfdfgxcgn-7MwAlJY3Ag"
 
 
 Bot = Client("my_bot", bot_token="5655260161:AAGBxz-malkH8b4WFzotxcgn-7MwAlJY3Ag")
